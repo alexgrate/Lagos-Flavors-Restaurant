@@ -7,7 +7,7 @@ import FeatureItem from './FeatureItem'
 
 import { features } from '../../constants'
 
-const RootedIntradition = () => {
+const Rootedintradition = () => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-80px" });
 
@@ -121,4 +121,4 @@ const RootedIntradition = () => {
     )
 }
 
-export default RootedIntradition
+export default Rootedintradition

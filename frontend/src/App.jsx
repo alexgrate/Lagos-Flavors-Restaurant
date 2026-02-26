@@ -7,8 +7,7 @@ import MobileNavBar from './components/Nav/MobileNavBar'
 import StatSection from './components/Home/StatSection'
 import TodaysSpecials from './components/Home/TodaySpecials'
 import Testimonials from './components/Testimonials/Testimonials'
-im
-import RootedInTradition from './components/Home/'
+import Rootedintradition from './components/Home/Rootedintradition'
 import CTASection from './components/Home/CtaSection'
 import Footer from './components/Footer/Footer'
 import Menu from './components/Menu/Menu'
@@ -25,7 +24,7 @@ const Home = () => {
       <StatSection />
       <TodaysSpecials />
       <Testimonials />
-      <RootedInTradition />
+      <Rootedintradition />
       <CTASection />
     </>
   )
