@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 
-import { colVariants, containerVariants, quickLinks, contactInfo, socials } from "../../constants";
+import { colVariants, containerVariants, navLinks, contactInfo, socials } from "../../constants";
 
 export default function Footer() {
     const ref = useRef(null);
@@ -98,14 +98,14 @@ export default function Footer() {
                     Quick Links
                 </h4>
                 <ul className="flex flex-col gap-3">
-                    {quickLinks.map((link, i) => (
-                        <motion.li key={link}
+                    {navLinks.map(({ label, href }, i) => (
+                        <motion.li key={label}
                             initial={{ opacity: 0, x: -12 }}
                             animate={isInView ? { opacity: 1, x: 0 } : {}}
                             transition={{ delay: 0.3 + i * 0.07, duration: 0.4 }}
                         >
                             <motion.a
-                                href="#"
+                                href={href}
                                 className="group flex items-center gap-2"
                                 style={{ color: "rgba(255,255,255,0.7)", fontSize: "clamp(0.875rem, 1.9vw, 0.95rem)", textDecoration: "none" }}
                                 whileHover={{ x: 5, color: "#fff" }}
@@ -115,7 +115,7 @@ export default function Footer() {
                                     className="w-0 group-hover:w-3 h-px rounded-full transition-all duration-300"
                                     style={{ background: "#fff" }}
                                 />
-                                    {link}
+                                {label}
                             </motion.a>
                         </motion.li>
                     ))}

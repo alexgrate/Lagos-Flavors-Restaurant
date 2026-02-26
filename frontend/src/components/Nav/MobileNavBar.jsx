@@ -33,35 +33,6 @@ const MobileNavBar = ({ menuOpen, setMenuOpen, activeIndex, setActiveIndex }) =>
                         }}
                     />
 
-                    <motion.button
-                        onClick={() => setMenuOpen(false)}
-                        className="absolute top-5 right-5 z-50 w-10 h-10 rounded-full flex items-center justify-center"
-                        style={{ background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.12)" }}
-                        initial={{ opacity: 0, rotate: -90, scale: 0.7 }}
-                        animate={{ opacity: 1, rotate: 0, scale: 1 }}
-                        transition={{ delay: 0.25, duration: 0.35, ease: "easeOut" }}
-                        whileTap={{ scale: 0.9 }}
-                        aria-label="Close menu"
-                    >
-                        <svg className="w-4 h-4 text-white/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    </motion.button>
-
-                    <motion.a
-                        href="/"
-                        className="absolute top-5 left-7 flex items-center gap-2.5 no-underline"
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: 0.2, duration: 0.4 }}
-                    >
-                        <svg viewBox="0 0 36 36" fill="none" className="w-7 h-7 flex shrink-0">
-                            <line x1="6" y1="6" x2="30" y2="30" stroke="#e03d2f" strokeWidth="3.5" strokeLinecap="round"/>
-                            <line x1="30" y1="6" x2="6" y2="30" stroke="#e03d2f" strokeWidth="3.5" strokeLinecap="round"/>
-                        </svg>
-                        <span className="font-display text-white text-base font-bold tracking-wide">Lagos Flavors</span>
-                    </motion.a>
-
                     <div className='relative flex flex-col justify-between h-full px-7 pt-24 pb-10'>
 
                         <nav>

@@ -16,6 +16,9 @@ import Contact from './components/Contact/Contact'
 import Reservations from './components/Reservations/Reservations'
 import Cart from './components/Cart/Cart'
 
+import NotFoundPage from './components/Home/NotFoundPage'
+import ScrollToTop from './constants/ScrollToTop'
+
 const Home = () => {
   
   return (
@@ -37,6 +40,7 @@ const App = () => {
   
   return (
     <BrowserRouter> 
+      <ScrollToTop />
       <NavBar menuOpen={menuOpen} setMenuOpen={setMenuOpen} activeIndex={activeIndex} setActiveIndex={setActiveIndex} />
       <MobileNavBar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <Routes>
@@ -46,6 +50,7 @@ const App = () => {
         <Route path='/contact' element={<Contact />} />
         <Route path='/reservations' element={<Reservations />} />
         <Route path='/cart' element={<Cart />} />
+        <Route path='*' element={<NotFoundPage />} />
       </Routes>
       <Footer />
     </BrowserRouter>

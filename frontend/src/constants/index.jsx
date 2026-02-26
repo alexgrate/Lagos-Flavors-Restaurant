@@ -159,8 +159,6 @@ export const features = [
     },
 ];
 
-export const quickLinks = ["Menu", "About Us", "Contact", "Reservations", "Order Online"];
-
 
 export const contactInfo = [
     {
